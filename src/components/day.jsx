@@ -22,7 +22,7 @@ const Day = (props) => {
 
     return (
         <div>
-            {dict[props.current] == null ? <h1>Hello!</h1> : <h1>{dict[props.current].desc}</h1>}
+            {dict[props.current] == null ? <h1>No Data</h1> : <h1>{dict[props.current].desc}</h1>}
         </div>
     )
 }
