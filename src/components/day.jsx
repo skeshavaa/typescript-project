@@ -4,18 +4,25 @@ import { useStaticQuery, graphql } from 'gatsby'
 const Day = (props) => {
 
   const data = useStaticQuery(graphql`
-  query my {
+  query allData {
     gcms {
-        day(where: {date: ${props.current}}){
+        days{
           desc
+          date
         }
       }
   }
   `)
 
+  var dict = {}
+
+  data.gcms.days.map((day) => {
+    dict[day.date] = day;
+  })
+
     return (
         <div>
-            <h1>hi</h1>
+            {dict[props.current] == null ? <h1>Hello!</h1> : <h1>{dict[props.current].desc}</h1>}
         </div>
     )
 }
