@@ -6,8 +6,8 @@
  */
 
 import React from "react"
-import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import styled from 'styled-components'
 
 import Header from './header.jsx'
 
@@ -25,10 +25,16 @@ const Layout = ({ children }) => {
   return (
     <div>
       <Header />
+      <Content>
       {children}
+      </Content>
     </div>
   )
 }
 
 export default Layout
 
+const Content = styled.div`
+  background: #ff6b6b;
+  min-height: 100vh;
+`
