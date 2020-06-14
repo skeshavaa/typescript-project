@@ -23,10 +23,10 @@ const IndexPage = () => {
   }
 
   return(
-    <div>
+    <Layout>
       <Calendar onClickDay={(e) => handler(e)}/>
       <Day current={query} />
-    </div>
+    </Layout>
   )
   
 }

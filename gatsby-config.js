@@ -38,6 +38,7 @@ module.exports = {
           // You can use this endpoint that features US mountains for now.
           url: "https://api-eu-central-1.graphcms.com/v2/ckaw60mux3qyj01ysaj4kbs9o/master",
       },
-  },
+    },
+    `gatsby-plugin-styled-components`
   ],
 }
